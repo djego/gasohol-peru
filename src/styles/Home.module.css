@@ -4,14 +4,24 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.main h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-right: auto;
+}
+.main p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1rem auto 1rem 0;
 
+}
 .footer {
   display: flex;
   flex: 1;
@@ -55,6 +65,35 @@
   line-height: 1.5;
   font-size: 1.5rem;
 }
+.option ul {
+  list-style: none;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  top:0;
+  right: 0;
+  position:fixed;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+.option li {
+  display: inline-block;
+  margin: 0.5rem
+}
+.option a {
+  display: inline;
+  padding: 0.3rem;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+  background: #222;
+}
 
 .code {
   background: #fafafa;
@@ -70,19 +109,38 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  margin-top: 1rem;
+}
+.grid_item{
+  flex-direction: row;
+}
+.grid h2{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 4rem;
 }
 
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   text-align: left;
   color: inherit;
+  min-width: 20rem;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  max-width: 20rem;
+  cursor: pointer;
+  height: 10rem;
 }
 
 .card:hover,
@@ -99,10 +157,19 @@
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
+.card span {
+  font-size: 1.5rem;
+  line-height: 1.5; 
+  float: right;
+}
+.position{
+  font-weight: 500;
+  font-size: 5rem;
+}
 .logo {
   height: 1em;
   margin-left: 0.5rem;
