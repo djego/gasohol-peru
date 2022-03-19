@@ -24,6 +24,7 @@ const Home = ({stations}: Props ) => {
         
         <h1 className={styles.title}>Grifos</h1>
         <p>Los 10 más barato por octanage</p>
+        <p>*Se actualiza cada dia a las 8am</p>
         <div className={styles.option}>
           <ul>
             <li><a href="#GASOL 84"> Gasol 84</a></li>

@@ -140,7 +140,6 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 20rem;
   cursor: pointer;
-  height: 10rem;
 }
 
 .card:hover,
