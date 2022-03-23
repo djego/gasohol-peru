@@ -35,7 +35,7 @@ const Home = ({stations}: Props ) => {
             <li><a className={styles.black} href="#DBS S-50 UV">⛽ Diesel 50</a></li>
           </ul>
         </div>
-        <div className={styles.toast} id="snackbar">Dirección copiada</div>
+        <div className={styles.toast} id="snackbar">Dirección de grifo copiada</div>
         <ListStation stations={stations} />
 
         <footer> 

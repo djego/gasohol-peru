@@ -29,7 +29,7 @@ export const ListStation = ({ stations }: Props) => {
       
       {Object.keys(station_grouped).map((key, index) => 
         <div className={styles.grid_item} key={index}> 
-          <h2 id={key}>{key}</h2>
+          <h2 id={key}>⛽ {key}</h2>
           <div className={styles.group}>
             { station_grouped[key].slice(0,10).map((station: Station, pos: number) => 
               <div key={station.address} onClick={() => copyToClipboard(station.address)}  className={styles.card}>
