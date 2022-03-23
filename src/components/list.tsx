@@ -20,7 +20,9 @@ export const ListStation = ({ stations }: Props) => {
     elem.select();
     document.execCommand('copy');
     document.body.removeChild(elem);
-    
+    const x = document.getElementById("snackbar")!
+    x.style.visibility = "visible";
+    setTimeout(function(){ x.style.visibility = "hidden"; }, 2000);
  }
   return (
     <div className={styles.grid}>  
@@ -32,9 +34,10 @@ export const ListStation = ({ stations }: Props) => {
             { station_grouped[key].slice(0,10).map((station: Station, pos: number) => 
               <div key={station.address} onClick={() => copyToClipboard(station.address)}  className={styles.card}>
                 <span className={styles.position}>{"#"+(pos+1)}</span>
-                <h3>S/. {station.price} ⛽</h3>
+                <h3>S/. {station.price}</h3>
                 <p>{station.address}</p>
                 <p>{station.district}</p>
+                <span>&#128203;</span>
               </div>
             )}
           </div>

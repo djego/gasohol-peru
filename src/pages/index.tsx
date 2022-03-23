@@ -22,21 +22,25 @@ const Home = ({stations}: Props ) => {
 
       <main className={styles.main}>
         
-        <h1 className={styles.title}>Grifos</h1>
-        <p>Los 10 más barato por octanage</p>
+        <h1 className={styles.title}>Grifos baratos</h1>
+        <p>Top 10 de grifos más barato por octanage</p>
         <p>*Se actualiza cada dia a las 8am</p>
         <div className={styles.option}>
           <ul>
-            <li><a href="#GASOL 84"> Gasol 84</a></li>
-            <li><a href="#GASOL 90"> Gasol 90</a></li>
-            <li><a href="#GASOL 95"> Gasol 95</a></li>
-            <li><a href="#GASOL 97"> Gasol 97</a></li>
-            <li><a href="#GASOL 98"> Gasol 98</a></li>
-            <li><a href="#DBS S-50 UV"> Diesel 50</a></li>
+            <li><a className={styles.yellow} href="#GASOL 84">⛽ Gasol 84</a></li>
+            <li><a className={styles.violet} href="#GASOL 90">⛽ Gasol 90</a></li>
+            <li><a className={styles.blue}href="#GASOL 95">⛽ Gasol 95</a></li>
+            <li><a className={styles.yellowLight} href="#GASOL 97">⛽ Gasol 97</a></li>
+            <li><a className={styles.yellowLight} href="#GASOL 98">⛽ Gasol 98</a></li>
+            <li><a className={styles.black} href="#DBS S-50 UV">⛽ Diesel 50</a></li>
           </ul>
         </div>
+        <div className={styles.toast} id="snackbar">Dirección copiada</div>
         <ListStation stations={stations} />
+
         <footer> 
+
+
         <p>@djego</p>
         </footer>
       </main>
