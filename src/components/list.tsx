@@ -14,15 +14,17 @@ export const ListStation = ({ stations }: Props) => {
   }, Object.create(null));
   
   function copyToClipboard(text:string) {
-    const elem = document.createElement('textarea');
-    elem.value = text;
-    document.body.appendChild(elem);
-    elem.select();
-    document.execCommand('copy');
-    document.body.removeChild(elem);
-    const x = document.getElementById("snackbar")!
-    x.style.visibility = "visible";
-    setTimeout(function(){ x.style.visibility = "hidden"; }, 2000);
+    window.open('https://www.google.com/maps/search/?api=1&query=' + text, '_blank');
+
+    // const elem = document.createElement('textarea');
+    // elem.value = text;
+    // document.body.appendChild(elem);
+    // elem.select();
+    // document.execCommand('copy');
+    // document.body.removeChild(elem);
+    // const x = document.getElementById("snackbar")!
+    // x.style.visibility = "visible";
+    // setTimeout(function(){ x.style.visibility = "hidden"; }, 2000);
  }
   return (
     <div className={styles.grid}>  
@@ -35,9 +37,10 @@ export const ListStation = ({ stations }: Props) => {
               <div key={station.address} onClick={() => copyToClipboard(station.address)}  className={styles.card}>
                 <span className={styles.position}>{"#"+(pos+1)}</span>
                 <h3>S/. {station.price}</h3>
-                <p>{station.address}</p>
-                <p>{station.district}</p>
-                <span>&#128203;</span>
+                <p>Empresa: {station.station}</p>
+                <p>Dirección: {station.address}</p>
+                <p><b>{station.district}</b></p>
+                <span>🗺️</span>
               </div>
             )}
           </div>
