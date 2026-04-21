@@ -1,3 +1,5 @@
+'use client';
+
 import { Station } from '../interfaces/station';
 import styles from '../styles/Home.module.css';
 
