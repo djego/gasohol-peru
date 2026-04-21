@@ -2,8 +2,8 @@ import styles from '../styles/Home.module.css';
 import { ListStation } from '../components/list';
 import { getStations } from '../lib/stations';
 
-// Revalidate every hour; Playwright runs in background after cache expires
-export const revalidate = 3600;
+// Skip static prerender — scraping runs at request time, not build time
+export const dynamic = 'force-dynamic';
 
 export default async function Home() {
   const stations = await getStations();
