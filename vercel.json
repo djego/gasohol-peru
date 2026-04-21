@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/extraction",
+      "schedule": "0 13 * * *"
+    }
+  ]
+}

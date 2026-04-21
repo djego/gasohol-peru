@@ -4,4 +4,6 @@ export interface Station {
     price: number;
     station: string;
     gasohol: string;
-  }
+    lat: number | null;
+    lng: number | null;
+}
