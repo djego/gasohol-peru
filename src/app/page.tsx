@@ -1,12 +1,10 @@
 import styles from '../styles/Home.module.css';
 import { ListStation } from '../components/list';
-import { getStations } from '../lib/stations';
-
-// Skip static prerender — scraping runs at request time, not build time
-export const dynamic = 'force-dynamic';
+import { loadStations } from '../lib/blob';
 
 export default async function Home() {
-  const stations = await getStations();
+  const payload = await loadStations();
+  const stations = payload?.stations ?? [];
 
   return (
     <div className={styles.container}>

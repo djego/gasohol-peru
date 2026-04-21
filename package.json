@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sparticuz/chromium": "^147.0.0",
+    "@vercel/blob": "^2.3.3",
     "next": "^15",
     "playwright-core": "^1.59.1",
     "react": "^19",

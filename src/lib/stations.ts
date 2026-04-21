@@ -82,6 +82,8 @@ export async function getStations(): Promise<Station[]> {
             address: cols[COL.address],
             district: '',
             price,
+            lat: null,
+            lng: null,
           });
         }
       }
