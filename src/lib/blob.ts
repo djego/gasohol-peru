@@ -1,7 +1,7 @@
-import { put, list, get } from '@vercel/blob';
-import type { Station } from '../interfaces/station';
+import { put, list, get } from "@vercel/blob";
+import type { Station } from "../interfaces/station";
 
-const BLOB_KEY = 'stations.json';
+const BLOB_KEY = "stations.json";
 
 export interface BlobPayload {
   extractedAt: string;
@@ -14,9 +14,10 @@ export async function saveStations(stations: Station[]): Promise<string> {
     stations,
   };
   const { url } = await put(BLOB_KEY, JSON.stringify(payload), {
-    access: 'private',
-    contentType: 'application/json',
+    access: "private",
+    contentType: "application/json",
     addRandomSuffix: false,
+    allowOverwrite: true,
   });
   return url;
 }
@@ -30,7 +31,7 @@ export async function loadStations(): Promise<BlobPayload | null> {
     (a, b) => new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime(),
   )[0];
 
-  const result = await get(latest.url, { access: 'private' });
+  const result = await get(latest.url, { access: "private" });
   if (!result) return null;
   const text = await new Response(result.stream).text();
   return JSON.parse(text) as BlobPayload;

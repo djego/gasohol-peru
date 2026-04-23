@@ -8,22 +8,31 @@ export default async function Home() {
 
   return (
     <div className={styles.container}>
-      <main className={styles.main}>
+      <header className={styles.header}>
         <h1 className={styles.title}>Grifos baratos</h1>
-        <p>Top 10 de grifos más barato por octanage de LIMA</p>
-        <p>*Actualizado cada día a las 8am</p>
-        <div className={styles.option}>
-          <ul>
-            <li><a className={styles.yellow} href="#Gasohol Regular">⛽ Gasohol Regular</a></li>
-            <li><a className={styles.blue} href="#Gasohol Premium">⛽ Gasohol Premium</a></li>
-            <li><a className={styles.black} href="#Diesel B5 S-50 UV">⛽ Diesel B5 S-50 UV</a></li>
-          </ul>
-        </div>
-        <ListStation stations={stations} />
-        <footer>
-          <p>@djego</p>
-        </footer>
-      </main>
+        <p className={styles.subtitle}>Top 10 más baratos por tipo de combustible · Lima · actualizado cada día a las 8am</p>
+      </header>
+
+      <nav className={styles.nav}>
+        <a href="#Gasohol Regular" className={styles.pill}>
+          <span className={`${styles.dot} ${styles.dotAmber}`} />
+          Gasohol Regular
+        </a>
+        <a href="#Gasohol Premium" className={styles.pill}>
+          <span className={`${styles.dot} ${styles.dotBlue}`} />
+          Gasohol Premium
+        </a>
+        <a href="#Diesel B5 S-50 UV" className={styles.pill}>
+          <span className={`${styles.dot} ${styles.dotGreen}`} />
+          Diesel B5 S-50 UV
+        </a>
+      </nav>
+
+      <ListStation stations={stations} />
+
+      <footer className={styles.footer}>
+        @djego
+      </footer>
     </div>
   );
 }
