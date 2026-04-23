@@ -1,0 +1,52 @@
+export interface District {
+  code: string;
+  name: string;
+}
+
+export const DEFAULT_DISTRICT = "150101";
+
+export const LIMA_DISTRICTS: District[] = [
+  { code: "150101", name: "Cercado de Lima" },
+  { code: "150102", name: "Ancón" },
+  { code: "150103", name: "Ate" },
+  { code: "150104", name: "Barranco" },
+  { code: "150105", name: "Breña" },
+  { code: "150106", name: "Carabayllo" },
+  { code: "150107", name: "Chaclacayo" },
+  { code: "150108", name: "Chorrillos" },
+  { code: "150109", name: "Cieneguilla" },
+  { code: "150110", name: "Comas" },
+  { code: "150111", name: "El Agustino" },
+  { code: "150112", name: "Independencia" },
+  { code: "150113", name: "Jesús María" },
+  { code: "150114", name: "La Molina" },
+  { code: "150115", name: "La Victoria" },
+  { code: "150116", name: "Lince" },
+  { code: "150117", name: "Los Olivos" },
+  { code: "150118", name: "Lurigancho" },
+  { code: "150119", name: "Lurín" },
+  { code: "150120", name: "Magdalena del Mar" },
+  { code: "150122", name: "Miraflores" },
+  { code: "150123", name: "Pachacámac" },
+  { code: "150124", name: "Pucusana" },
+  { code: "150144", name: "Pueblo Libre" },
+  { code: "150125", name: "Puente Piedra" },
+  { code: "150126", name: "Punta Hermosa" },
+  { code: "150127", name: "Punta Negra" },
+  { code: "150128", name: "Rímac" },
+  { code: "150129", name: "San Bartolo" },
+  { code: "150130", name: "San Borja" },
+  { code: "150131", name: "San Isidro" },
+  { code: "150132", name: "San Juan de Lurigancho" },
+  { code: "150133", name: "San Juan de Miraflores" },
+  { code: "150134", name: "San Luis" },
+  { code: "150135", name: "San Martín de Porres" },
+  { code: "150136", name: "San Miguel" },
+  { code: "150137", name: "Santa Anita" },
+  { code: "150138", name: "Santa María del Mar" },
+  { code: "150139", name: "Santa Rosa" },
+  { code: "150140", name: "Santiago de Surco" },
+  { code: "150141", name: "Surquillo" },
+  { code: "150142", name: "Villa El Salvador" },
+  { code: "150143", name: "Villa María del Triunfo" },
+];

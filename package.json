@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "extract": "tsx --env-file=.env scripts/extract.ts"
   },
   "dependencies": {
     "@sparticuz/chromium": "^147.0.0",
@@ -22,6 +23,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "^15",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
