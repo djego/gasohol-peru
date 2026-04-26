@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import { ListStation } from '../components/list';
 import { loadStations } from '../lib/blob';
@@ -29,6 +30,12 @@ export default async function Home() {
       </nav>
 
       <ListStation stations={stations} />
+
+      <div className={styles.calcBanner}>
+        <Link href="/calculadora" className={styles.calcBannerLink}>
+          ¿Vale la pena ir? → Calculadora de grifo óptimo
+        </Link>
+      </div>
 
       <footer className={styles.footer}>
         @djego

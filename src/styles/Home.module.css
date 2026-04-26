@@ -90,7 +90,7 @@
   cursor: pointer;
   min-width: 13rem;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-image: var(--chevron);
   background-repeat: no-repeat;
   background-position: right 0.6rem center;
   padding-right: 2rem;
@@ -227,6 +227,26 @@
   color: var(--muted);
   font-size: 0.9rem;
   padding: 2rem 0;
+}
+
+/* Calculator banner */
+.calcBanner {
+  margin: 2rem 0 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.calcBannerLink {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--amber);
+  transition: opacity 0.15s;
+}
+
+.calcBannerLink:hover {
+  opacity: 0.8;
 }
 
 /* Footer */
