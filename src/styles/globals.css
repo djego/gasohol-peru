@@ -8,6 +8,22 @@
   --amber: #f59e0b;
   --blue: #3b82f6;
   --green: #10b981;
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --surface: #f5f5f5;
+    --border: #e5e5e5;
+    --border-hover: #d0d0d0;
+    --text: #0a0a0a;
+    --muted: #999;
+    --amber: #d97706;
+    --blue: #2563eb;
+    --green: #059669;
+    --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  }
 }
 
 *,

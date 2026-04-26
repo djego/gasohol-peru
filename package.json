@@ -12,12 +12,15 @@
   "dependencies": {
     "@sparticuz/chromium": "^147.0.0",
     "@vercel/blob": "^2.3.3",
+    "leaflet": "^1.9.4",
     "next": "^15",
     "playwright-core": "^1.59.1",
     "react": "^19",
-    "react-dom": "^19"
+    "react-dom": "^19",
+    "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.21",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
