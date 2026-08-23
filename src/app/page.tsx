@@ -3,6 +3,8 @@ import styles from '../styles/Home.module.css';
 import { ListStation } from '../components/list';
 import { loadStations } from '../lib/blob';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const payload = await loadStations();
   const stations = payload?.stations ?? [];
